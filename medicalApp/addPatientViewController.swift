@@ -10,6 +10,17 @@ import UIKit
 
 class addPatientViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var dateOfBirthTextField: UITextField!
+    @IBOutlet weak var dateOfAdmissionTextField: UITextField!
+    
+    @IBOutlet weak var natureOfInjuryTextField: UITextField!
+    @IBOutlet weak var doctorNameTextField: UITextField!
+    @IBOutlet weak var seriousSelector: UISegmentedControl!
+    
+    
+    @IBOutlet weak var addPatientPressed: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -124,6 +124,9 @@
                                     <constraint firstAttribute="height" constant="100" id="PJD-Ua-3hv"/>
                                 </constraints>
                                 <state key="normal" title="Add Patient"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="v1o-54-Ks4"/>
+                                </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yhK-uS-1Tl">
                                 <rect key="frame" x="30" y="434" width="315" height="29"/>
@@ -186,6 +189,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uyj-k7-ujE"/>
                     </view>
+                    <connections>
+                        <outlet property="addPatientPressed" destination="MKF-aJ-hcm" id="IAD-nC-UPL"/>
+                        <outlet property="dateOfAdmissionTextField" destination="JEm-PQ-OlD" id="z0t-R6-6E4"/>
+                        <outlet property="dateOfBirthTextField" destination="xx7-Mn-QFs" id="B6K-wb-fE1"/>
+                        <outlet property="doctorNameTextField" destination="h4n-HG-kH2" id="iKl-MI-hIZ"/>
+                        <outlet property="nameTextField" destination="hM8-gO-Hfn" id="wDs-u1-Qyg"/>
+                        <outlet property="natureOfInjuryTextField" destination="KCu-P4-eNz" id="sJc-4R-Rty"/>
+                        <outlet property="seriousSelector" destination="yhK-uS-1Tl" id="uHQ-9u-mJ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkf-HT-3FC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
