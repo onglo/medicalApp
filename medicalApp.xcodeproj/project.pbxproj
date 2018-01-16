@@ -12,6 +12,7 @@
 		5BCF9F12200E29AE002DC5C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF9F10200E29AE002DC5C3 /* Main.storyboard */; };
 		5BCF9F14200E29AE002DC5C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF9F13200E29AE002DC5C3 /* Assets.xcassets */; };
 		5BCF9F17200E29AE002DC5C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF9F15200E29AE002DC5C3 /* LaunchScreen.storyboard */; };
+		5BCF9F1F200E2BED002DC5C3 /* addPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF9F1E200E2BED002DC5C3 /* addPatientViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		5BCF9F13200E29AE002DC5C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BCF9F16200E29AE002DC5C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BCF9F18200E29AE002DC5C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BCF9F1E200E2BED002DC5C3 /* addPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPatientViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				5BCF9F0C200E29AE002DC5C3 /* AppDelegate.swift */,
 				5BCF9F0E200E29AE002DC5C3 /* ViewController.swift */,
 				5BCF9F10200E29AE002DC5C3 /* Main.storyboard */,
+				5BCF9F1E200E2BED002DC5C3 /* addPatientViewController.swift */,
 				5BCF9F13200E29AE002DC5C3 /* Assets.xcassets */,
 				5BCF9F15200E29AE002DC5C3 /* LaunchScreen.storyboard */,
 				5BCF9F18200E29AE002DC5C3 /* Info.plist */,
@@ -138,6 +141,7 @@
 			files = (
 				5BCF9F0F200E29AE002DC5C3 /* ViewController.swift in Sources */,
 				5BCF9F0D200E29AE002DC5C3 /* AppDelegate.swift in Sources */,
+				5BCF9F1F200E2BED002DC5C3 /* addPatientViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
