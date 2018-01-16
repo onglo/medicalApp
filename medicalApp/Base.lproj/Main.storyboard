@@ -22,17 +22,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hospital Administration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKu-3e-yDW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hospital Administration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKu-3e-yDW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72426903247833252" green="0.88566720485687256" blue="0.95286351442337036" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="jlM-yc-UYQ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.75438620115197064" green="0.92453536980055195" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-qu-3iS">
-                                <rect key="frame" x="0.0" y="152" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-qu-3iS">
+                                <rect key="frame" x="0.0" y="150" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ox7-IB-MJf"/>
+                                </constraints>
                                 <state key="normal" title="Add Patient">
                                     <color key="titleColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -40,15 +44,28 @@
                                     <segue destination="ogu-yu-tP1" kind="presentation" modalTransitionStyle="flipHorizontal" id="C3V-AL-n7I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q20-fZ-dh2">
-                                <rect key="frame" x="0.0" y="260" width="375" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q20-fZ-dh2">
+                                <rect key="frame" x="0.0" y="250" width="375" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="bTI-BU-97Y"/>
+                                </constraints>
                                 <state key="normal" title="View All">
                                     <color key="titleColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dKu-3e-yDW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="4Gb-C8-6eH"/>
+                            <constraint firstItem="Q20-fZ-dh2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Gh-YM-Jec"/>
+                            <constraint firstItem="dKu-3e-yDW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dzm-3B-s6I"/>
+                            <constraint firstItem="PwZ-qu-3iS" firstAttribute="top" secondItem="dKu-3e-yDW" secondAttribute="bottom" constant="50" id="Jqd-Ui-tLm"/>
+                            <constraint firstItem="PwZ-qu-3iS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UzS-Un-8pg"/>
+                            <constraint firstItem="Q20-fZ-dh2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WLe-lu-ILe"/>
+                            <constraint firstItem="dKu-3e-yDW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YM6-OS-uHS"/>
+                            <constraint firstItem="PwZ-qu-3iS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZGA-vB-6wQ"/>
+                            <constraint firstItem="Q20-fZ-dh2" firstAttribute="top" secondItem="PwZ-qu-3iS" secondAttribute="bottom" id="e0n-BH-q1h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -67,7 +84,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a patient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJI-nk-NW6">
                                 <rect key="frame" x="136.5" y="30" width="102" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hM8-gO-Hfn">
@@ -102,7 +119,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MKF-aJ-hcm">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.72426903247833252" green="0.88566720485687256" blue="0.95286351442337036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.72426903247833252" green="0.88566720485687256" blue="0.95286351442337036" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="PJD-Ua-3hv"/>
                                 </constraints>
@@ -126,11 +143,11 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How serious is their condition?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yx-T9-8jI">
                                 <rect key="frame" x="30" y="396" width="315" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.029366424307227135" green="0.24483564496040344" blue="0.36539942026138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5yx-T9-8jI" firstAttribute="centerX" secondItem="hM8-gO-Hfn" secondAttribute="centerX" id="2qh-BU-Sod"/>
                             <constraint firstItem="xx7-Mn-QFs" firstAttribute="centerX" secondItem="hM8-gO-Hfn" secondAttribute="centerX" id="421-fZ-4uR"/>
