@@ -8,12 +8,12 @@
 
 import Foundation
 
-class Patient {
+struct Patient {
     
     var name:String?
-    var DOB:Date?
+    var DOB:String?
     var doctor:String?
-    var dateAdmitted:Date?
+    var dateAdmitted:String?
     var natureOfInjury:String?
     var injurySeriousIndex:Int?
     

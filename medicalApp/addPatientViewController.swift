@@ -18,8 +18,15 @@ class addPatientViewController: UIViewController {
     @IBOutlet weak var doctorNameTextField: UITextField!
     @IBOutlet weak var seriousSelector: UISegmentedControl!
     
-    
-    @IBOutlet weak var addPatientPressed: UIButton!
+    @IBAction func addPatientPressed(_ sender: Any) {
+        
+        // create a new patient instance and push it into the patient array
+        let newPatient:Patient = Patient(name: nameTextField.text, DOB: dateOfBirthTextField.text, doctor: doctorNameTextField.text, dateAdmitted: dateOfAdmissionTextField.text, natureOfInjury: natureOfInjuryTextField.text, injurySeriousIndex: seriousSelector.selectedSegmentIndex)
+        
+        patientData.append(newPatient)
+        
+        print(patientData)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

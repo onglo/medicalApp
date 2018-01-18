@@ -8,4 +8,5 @@
 
 import Foundation
 
-var patientData = [[Any]]
+var patientData:[Patient] = [Patient]()
+

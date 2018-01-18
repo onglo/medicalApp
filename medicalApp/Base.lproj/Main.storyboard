@@ -125,6 +125,7 @@
                                 </constraints>
                                 <state key="normal" title="Add Patient"/>
                                 <connections>
+                                    <action selector="addPatientPressed:" destination="ogu-yu-tP1" eventType="touchUpInside" id="tsx-f8-0nm"/>
                                     <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="flipHorizontal" id="v1o-54-Ks4"/>
                                 </connections>
                             </button>
@@ -190,7 +191,6 @@
                         <viewLayoutGuide key="safeArea" id="Uyj-k7-ujE"/>
                     </view>
                     <connections>
-                        <outlet property="addPatientPressed" destination="MKF-aJ-hcm" id="IAD-nC-UPL"/>
                         <outlet property="dateOfAdmissionTextField" destination="JEm-PQ-OlD" id="z0t-R6-6E4"/>
                         <outlet property="dateOfBirthTextField" destination="xx7-Mn-QFs" id="B6K-wb-fE1"/>
                         <outlet property="doctorNameTextField" destination="h4n-HG-kH2" id="iKl-MI-hIZ"/>
