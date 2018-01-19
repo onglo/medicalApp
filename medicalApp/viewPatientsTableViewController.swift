@@ -69,7 +69,14 @@ class viewPatientsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            print("delete")
+            
+            // delete the value from the array
+            patientData.remove(at: indexPath.row)
+            
+            // updatetableview
+            self.tableView.reloadData()
+            
+            
         }
     }
 
