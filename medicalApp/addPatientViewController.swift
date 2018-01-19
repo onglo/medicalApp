@@ -20,8 +20,11 @@ class addPatientViewController: UIViewController {
     
     @IBAction func addPatientPressed(_ sender: Any) {
         
+        // generate a patient id
+        let patientId:Int = Int(arc4random())
+        
         // create a new patient instance and push it into the patient array
-        let newPatient:Patient = Patient(name: nameTextField.text, DOB: dateOfBirthTextField.text, doctor: doctorNameTextField.text, dateAdmitted: dateOfAdmissionTextField.text, natureOfInjury: natureOfInjuryTextField.text, injurySeriousIndex: seriousSelector.selectedSegmentIndex)
+        let newPatient:Patient = Patient(name: nameTextField.text, DOB: dateOfBirthTextField.text, doctor: doctorNameTextField.text, dateAdmitted: dateOfAdmissionTextField.text, natureOfInjury: natureOfInjuryTextField.text, injurySeriousIndex: seriousSelector.selectedSegmentIndex, idNumber: patientId)
         
         patientData.append(newPatient)
         

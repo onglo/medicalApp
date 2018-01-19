@@ -16,5 +16,6 @@ struct Patient {
     var dateAdmitted:String?
     var natureOfInjury:String?
     var injurySeriousIndex:Int?
+    var idNumber:Int?
     
 }
