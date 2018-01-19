@@ -9,6 +9,8 @@
 import UIKit
 
 class viewPatientsTableViewController: UITableViewController {
+    
+    var segueData:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,6 @@ class viewPatientsTableViewController: UITableViewController {
             return 1
         }
         else {
-            print(patientData.count)
             return patientData.count
         }
         
@@ -80,6 +81,18 @@ class viewPatientsTableViewController: UITableViewController {
         }
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // check that there is data
+        if (patientData.count != 0) {
+            
+            // tell the segue which patient we need and segue to next screen
+            segueData = indexPath.row
+            self.performSegue(withIdentifier: "editPatient", sender: nil)
+        }
+        
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -115,14 +128,26 @@ class viewPatientsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        // check going to edit patient
+        if segue.identifier == "editPatient" {
+            
+            // set patient id in editVC
+            let editView:editPatientViewController = segue.destination as! editPatientViewController
+            
+            editView.patientID = segueData
+            
+        }
+        
+        
     }
-    */
+ 
 
 }

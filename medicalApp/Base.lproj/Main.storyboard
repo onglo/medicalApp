@@ -78,7 +78,7 @@
                                     <outlet property="priorityLabel" destination="kgK-Fb-fD4" id="bhr-fe-zKt"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noData" id="cZy-cU-JTx">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="noData" id="cZy-cU-JTx">
                                 <rect key="frame" x="0.0" y="128" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZy-cU-JTx" id="3qo-6k-CGY">
@@ -106,10 +106,13 @@
                             <outlet property="delegate" destination="acO-ur-OhP" id="tXP-xP-cb8"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="0dV-Nq-f8c" kind="show" identifier="editPatient" id="2Tg-Od-jKO"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cWP-M0-xdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="-702.09895052473769"/>
+            <point key="canvasLocation" x="151" y="-743"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -307,11 +310,142 @@
             </objects>
             <point key="canvasLocation" x="1006" y="117"/>
         </scene>
+        <!--Edit Patient View Controller-->
+        <scene sceneID="xh2-qr-8Jr">
+            <objects>
+                <viewController id="0dV-Nq-f8c" customClass="editPatientViewController" customModule="medicalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BN4-lM-i7c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit a patient" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIi-ZB-MTc">
+                                <rect key="frame" x="137.5" y="30" width="100.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-Zd-yB1">
+                                <rect key="frame" x="30" y="91" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxU-x1-Jvw">
+                                <rect key="frame" x="30" y="141" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of admission" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nE1-b3-44U">
+                                <rect key="frame" x="30" y="191" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nature of Injury" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bB6-18-CQw">
+                                <rect key="frame" x="30" y="241" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U7H-Yo-oUc">
+                                <rect key="frame" x="30" y="291" width="315" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXg-68-B7Z">
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <color key="backgroundColor" red="0.72426903249999997" green="0.88566720489999995" blue="0.95286351439999994" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="uDc-EL-b4h"/>
+                                </constraints>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updatePressed:" destination="0dV-Nq-f8c" eventType="touchUpInside" id="e03-n0-T9j"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFl-Ve-2Km">
+                                <rect key="frame" x="30" y="434" width="315" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                    <segment title="8"/>
+                                    <segment title="9"/>
+                                    <segment title="10"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How serious is their condition?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYT-S9-us5">
+                                <rect key="frame" x="30" y="396" width="315" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.02936642431" green="0.24483564499999999" blue="0.3653994203" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="U7H-Yo-oUc" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="1eJ-YY-4gp"/>
+                            <constraint firstItem="U7H-Yo-oUc" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="26b-u6-IoG"/>
+                            <constraint firstItem="bB6-18-CQw" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="8ae-iq-n0x"/>
+                            <constraint firstItem="CFl-Ve-2Km" firstAttribute="top" secondItem="fYT-S9-us5" secondAttribute="bottom" constant="20" id="CSx-dY-QK0"/>
+                            <constraint firstItem="bB6-18-CQw" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="Cf4-M8-TmK"/>
+                            <constraint firstItem="bB6-18-CQw" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="Dji-QH-Dg2"/>
+                            <constraint firstItem="jxU-x1-Jvw" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="F4U-4y-njU"/>
+                            <constraint firstItem="jxU-x1-Jvw" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="FdF-dQ-QSM"/>
+                            <constraint firstItem="EXg-68-B7Z" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="IHx-8n-5MX"/>
+                            <constraint firstItem="6g2-fX-lze" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" constant="30" id="M28-u2-Jvf"/>
+                            <constraint firstItem="nE1-b3-44U" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="N7g-i0-EVN"/>
+                            <constraint firstItem="iIi-ZB-MTc" firstAttribute="top" secondItem="6g2-fX-lze" secondAttribute="top" constant="10" id="QpJ-1K-gRb"/>
+                            <constraint firstItem="CFl-Ve-2Km" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="Shh-nR-qkR"/>
+                            <constraint firstItem="bB6-18-CQw" firstAttribute="top" secondItem="nE1-b3-44U" secondAttribute="bottom" constant="20" id="T0w-zH-IKI"/>
+                            <constraint firstItem="nE1-b3-44U" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="T50-e9-rFU"/>
+                            <constraint firstItem="nE1-b3-44U" firstAttribute="top" secondItem="jxU-x1-Jvw" secondAttribute="bottom" constant="20" id="UUs-TT-bKH"/>
+                            <constraint firstItem="U7H-Yo-oUc" firstAttribute="top" secondItem="bB6-18-CQw" secondAttribute="bottom" constant="20" id="a6I-Mf-2KX"/>
+                            <constraint firstItem="nE1-b3-44U" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="bAC-hC-RVe"/>
+                            <constraint firstItem="fYT-S9-us5" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="ckD-EM-YO2"/>
+                            <constraint firstItem="fYT-S9-us5" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="dCs-B3-cs8"/>
+                            <constraint firstItem="jxU-x1-Jvw" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="dHn-yh-knU"/>
+                            <constraint firstItem="A4x-Zd-yB1" firstAttribute="leading" secondItem="6g2-fX-lze" secondAttribute="leading" constant="30" id="epq-LD-uAb"/>
+                            <constraint firstItem="jxU-x1-Jvw" firstAttribute="top" secondItem="A4x-Zd-yB1" secondAttribute="bottom" constant="20" id="gP6-Vr-hLr"/>
+                            <constraint firstItem="iIi-ZB-MTc" firstAttribute="centerX" secondItem="BN4-lM-i7c" secondAttribute="centerX" id="giS-5G-Ymt"/>
+                            <constraint firstItem="EXg-68-B7Z" firstAttribute="bottom" secondItem="6g2-fX-lze" secondAttribute="bottom" id="gy9-vY-Ozb"/>
+                            <constraint firstItem="CFl-Ve-2Km" firstAttribute="trailing" secondItem="A4x-Zd-yB1" secondAttribute="trailing" id="h6n-GL-9DF"/>
+                            <constraint firstItem="EXg-68-B7Z" firstAttribute="leading" secondItem="6g2-fX-lze" secondAttribute="leading" id="heT-rZ-sWa"/>
+                            <constraint firstItem="U7H-Yo-oUc" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="jOw-H9-9Ru"/>
+                            <constraint firstItem="fYT-S9-us5" firstAttribute="leading" secondItem="A4x-Zd-yB1" secondAttribute="leading" id="lHu-wW-Vnn"/>
+                            <constraint firstItem="A4x-Zd-yB1" firstAttribute="top" secondItem="iIi-ZB-MTc" secondAttribute="bottom" constant="40" id="lKc-ND-Juh"/>
+                            <constraint firstItem="6g2-fX-lze" firstAttribute="trailing" secondItem="EXg-68-B7Z" secondAttribute="trailing" id="lt7-Yh-aST"/>
+                            <constraint firstItem="iIi-ZB-MTc" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="nDC-Nf-1uM"/>
+                            <constraint firstItem="fYT-S9-us5" firstAttribute="top" secondItem="U7H-Yo-oUc" secondAttribute="bottom" constant="75" id="nQn-MF-P7n"/>
+                            <constraint firstItem="CFl-Ve-2Km" firstAttribute="centerX" secondItem="A4x-Zd-yB1" secondAttribute="centerX" id="s4o-xM-enA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6g2-fX-lze"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateOfAdmissionTextField" destination="nE1-b3-44U" id="pV6-yl-Pbw"/>
+                        <outlet property="dateOfBirthTextField" destination="jxU-x1-Jvw" id="Mf2-kx-kMj"/>
+                        <outlet property="doctorNameTextField" destination="U7H-Yo-oUc" id="AZo-zR-90O"/>
+                        <outlet property="nameTextField" destination="A4x-Zd-yB1" id="5On-BN-s3z"/>
+                        <outlet property="natureOfInjuryTextField" destination="bB6-18-CQw" id="J61-PG-xf9"/>
+                        <outlet property="seriousSelector" destination="CFl-Ve-2Km" id="EWh-nQ-csA"/>
+                        <segue destination="acO-ur-OhP" kind="show" identifier="returnToTable" id="qSx-ey-YeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAr-ez-J60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006" y="-702"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background" width="4400" height="2452"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9Vd-7a-YGs"/>
+        <segue reference="qSx-ey-YeX"/>
     </inferredMetricsTieBreakers>
 </document>
