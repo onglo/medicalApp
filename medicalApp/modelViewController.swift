@@ -8,5 +8,5 @@
 
 import Foundation
 
-var patientData:[Patient] = [Patient]()
+var patientData:[Patient] = [Patient(name: "Edouard", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 2, idNumber: 121232)]
 

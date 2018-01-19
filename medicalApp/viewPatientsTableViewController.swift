@@ -28,24 +28,50 @@ class viewPatientsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        // check if there is patient data if not we will put in a placeholder
+        if (patientData.count == 0) {
+            return 1
+        }
+        else {
+            print(patientData.count)
+            return patientData.count
+        }
+        
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
-
-        return cell
+        if (patientData.count == 0) {
+            // if there is no patient data return cell saaying there is no data
+            let cell = tableView.dequeueReusableCell(withIdentifier: "noData")
+            return cell!
+        }
+        
+        else {
+            
+            let patientCell:patientTableViewCell = tableView.dequeueReusableCell(withIdentifier: "patientCell") as! patientTableViewCell
+            
+            patientCell.nameLabel.text = "\(String(describing: patientData[indexPath.row].name!)) - \(String(describing: patientData[indexPath.row].idNumber!))"
+            
+            patientCell.datesLabel.text = "DOB:\(String(describing: patientData[indexPath.row].DOB!)), Date Admitted:\(String(describing: patientData[indexPath.row].dateAdmitted!))"
+            
+            patientCell.priorityLabel.text = "Priority: \(String(describing: patientData[indexPath.row].injurySeriousIndex!))"
+            
+            return patientCell
+        }
     }
-    */
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            print("delete")
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.

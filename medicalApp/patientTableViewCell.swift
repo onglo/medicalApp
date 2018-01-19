@@ -10,7 +10,7 @@ import UIKit
 
 class patientTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var datesLabel: UILabel!
     @IBOutlet weak var priorityLabel: UILabel!
     

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,24 +15,26 @@
         <scene sceneID="jab-yb-XKS">
             <objects>
                 <tableViewController id="acO-ur-OhP" customClass="viewPatientsTableViewController" customModule="medicalApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZP6-ZA-jmD">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ZP6-ZA-jmD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.029366424307227135" green="0.24483564496040344" blue="0.36539942026138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.029366424307227135" green="0.24483564496040344" blue="0.36539942026138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bkY-70-n18">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Close"/>
-                            <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="partialCurl" id="hiI-b4-oIX"/>
-                            </connections>
-                        </button>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="VeO-Ye-bPy">
+                            <rect key="frame" x="0.0" y="228" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem title="Close" id="WyA-47-QZ2">
+                                    <connections>
+                                        <segue destination="BYZ-38-t0r" kind="show" id="9Vd-7a-YGs"/>
+                                    </connections>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="patientCell" rowHeight="100" id="b1A-hr-pGL" customClass="patientTableViewCell" customModule="medicalApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b1A-hr-pGL" id="Ecp-bN-Xkp">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="99.5"/>
@@ -44,7 +47,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB: 12.12.21, Admitted: 12.03.19" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPw-ZK-sWR">
-                                            <rect key="frame" x="15" y="39" width="326" height="21"/>
+                                            <rect key="frame" x="15" y="39.5" width="326" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -71,9 +74,31 @@
                                 <color key="backgroundColor" red="0.029366424307227135" green="0.24483564496040344" blue="0.36539942026138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="datesLabel" destination="VPw-ZK-sWR" id="5RB-Ef-h4S"/>
-                                    <outlet property="nameLabel" destination="Ecp-bN-Xkp" id="RRo-Z9-6Bz"/>
+                                    <outlet property="nameLabel" destination="lw2-wk-R1q" id="0Jm-yc-0O2"/>
                                     <outlet property="priorityLabel" destination="kgK-Fb-fD4" id="bhr-fe-zKt"/>
                                 </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noData" id="cZy-cU-JTx">
+                                <rect key="frame" x="0.0" y="128" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZy-cU-JTx" id="3qo-6k-CGY">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No patients to show!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KSg-Xc-ykU">
+                                            <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="KSg-Xc-ykU" secondAttribute="trailing" id="aUL-rf-zQN"/>
+                                        <constraint firstItem="KSg-Xc-ykU" firstAttribute="top" secondItem="3qo-6k-CGY" secondAttribute="topMargin" id="l5u-Qo-hSm"/>
+                                        <constraint firstItem="KSg-Xc-ykU" firstAttribute="leading" secondItem="3qo-6k-CGY" secondAttribute="leadingMargin" id="tua-fU-tUd"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.029366424307227135" green="0.24483564496040344" blue="0.36539942026138306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -129,7 +154,7 @@
                                     <color key="titleColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="acO-ur-OhP" kind="presentation" modalTransitionStyle="partialCurl" id="sdC-ak-tEZ"/>
+                                    <segue destination="acO-ur-OhP" kind="show" id="IXy-wi-j54"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -287,6 +312,6 @@
         <image name="background" width="4400" height="2452"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="hiI-b4-oIX"/>
+        <segue reference="9Vd-7a-YGs"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -10,12 +10,12 @@ import Foundation
 
 struct Patient {
     
-    var name:String?
-    var DOB:String?
-    var doctor:String?
-    var dateAdmitted:String?
-    var natureOfInjury:String?
-    var injurySeriousIndex:Int?
-    var idNumber:Int?
+    var name:String!
+    var DOB:String!
+    var doctor:String!
+    var dateAdmitted:String!
+    var natureOfInjury:String!
+    var injurySeriousIndex:Int!
+    var idNumber:Int!
     
 }
