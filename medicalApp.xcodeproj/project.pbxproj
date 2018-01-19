@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BAE65232011F7EF00D8B4AA /* viewPatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE65222011F7EF00D8B4AA /* viewPatientsTableViewController.swift */; };
+		5BAE65252011F97300D8B4AA /* patientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE65242011F97300D8B4AA /* patientTableViewCell.swift */; };
 		5BCF9F0D200E29AE002DC5C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF9F0C200E29AE002DC5C3 /* AppDelegate.swift */; };
 		5BCF9F0F200E29AE002DC5C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF9F0E200E29AE002DC5C3 /* ViewController.swift */; };
 		5BCF9F12200E29AE002DC5C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF9F10200E29AE002DC5C3 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BAE65222011F7EF00D8B4AA /* viewPatientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewPatientsTableViewController.swift; sourceTree = "<group>"; };
+		5BAE65242011F97300D8B4AA /* patientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = patientTableViewCell.swift; sourceTree = "<group>"; };
 		5BCF9F09200E29AE002DC5C3 /* medicalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = medicalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BCF9F0C200E29AE002DC5C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BCF9F0E200E29AE002DC5C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				5BCF9F0C200E29AE002DC5C3 /* AppDelegate.swift */,
 				5BCF9F0E200E29AE002DC5C3 /* ViewController.swift */,
 				5BCF9F10200E29AE002DC5C3 /* Main.storyboard */,
+				5BAE65242011F97300D8B4AA /* patientTableViewCell.swift */,
+				5BAE65222011F7EF00D8B4AA /* viewPatientsTableViewController.swift */,
 				5BCF9F22200E308F002DC5C3 /* patientDataModel.swift */,
 				5BCF9F20200E305B002DC5C3 /* modelViewController.swift */,
 				5BCF9F1E200E2BED002DC5C3 /* addPatientViewController.swift */,
@@ -145,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BAE65232011F7EF00D8B4AA /* viewPatientsTableViewController.swift in Sources */,
+				5BAE65252011F97300D8B4AA /* patientTableViewCell.swift in Sources */,
 				5BCF9F21200E305B002DC5C3 /* modelViewController.swift in Sources */,
 				5BCF9F0F200E29AE002DC5C3 /* ViewController.swift in Sources */,
 				5BCF9F0D200E29AE002DC5C3 /* AppDelegate.swift in Sources */,
