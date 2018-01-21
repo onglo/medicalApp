@@ -115,6 +115,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="searchBar" destination="O6h-d3-vI6" id="ZnE-SD-vup"/>
                         <outlet property="searchDisplayController" destination="xvO-MI-goU" id="VXN-iK-kLH"/>
                         <segue destination="0dV-Nq-f8c" kind="show" identifier="editPatient" id="2Tg-Od-jKO"/>
                     </connections>
@@ -123,7 +124,6 @@
                 <searchDisplayController id="xvO-MI-goU">
                     <connections>
                         <outlet property="delegate" destination="acO-ur-OhP" id="Mma-82-Njz"/>
-                        <outlet property="searchBar" destination="O6h-d3-vI6" id="84G-XU-plW"/>
                         <outlet property="searchContentsController" destination="acO-ur-OhP" id="CVW-kI-PCJ"/>
                         <outlet property="searchResultsDataSource" destination="acO-ur-OhP" id="Y7v-R4-fSB"/>
                         <outlet property="searchResultsDelegate" destination="acO-ur-OhP" id="Jm2-PL-aZa"/>

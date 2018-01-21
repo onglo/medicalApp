@@ -8,12 +8,23 @@
 
 import UIKit
 
-class viewPatientsTableViewController: UITableViewController {
+class viewPatientsTableViewController: UITableViewController, UISearchBarDelegate {
     
     var segueData:Int!
-
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    // keeps track of if we are searching
+    var searching = false
+    
+    // array holds current search results
+    var searchResuls = [Patient]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,6 +46,11 @@ class viewPatientsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        // check if we are currenlty searching
+        if searching {
+            return searchResuls.count
+        }
+        
         // check if there is patient data if not we will put in a placeholder
         if (patientData.count == 0) {
             return 1
@@ -48,6 +64,20 @@ class viewPatientsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
+        // check if we are searching
+        if searching {
+            let patientCell:patientTableViewCell = tableView.dequeueReusableCell(withIdentifier: "patientCell") as! patientTableViewCell
+            
+            patientCell.nameLabel.text = "\(String(describing: searchResuls[indexPath.row].name!)) - \(String(describing: searchResuls[indexPath.row].idNumber!))"
+            
+            patientCell.datesLabel.text = "DOB:\(String(describing: searchResuls[indexPath.row].DOB!)), Date Admitted:\(String(describing: searchResuls[indexPath.row].dateAdmitted!))"
+            
+            patientCell.priorityLabel.text = "Priority: \(String(describing: searchResuls[indexPath.row].injurySeriousIndex!))"
+            
+            return patientCell
+        }
+        
+        
         if (patientData.count == 0) {
             // if there is no patient data return cell saaying there is no data
             let cell = tableView.dequeueReusableCell(withIdentifier: "noData")
@@ -89,6 +119,27 @@ class viewPatientsTableViewController: UITableViewController {
             // tell the segue which patient we need and segue to next screen
             segueData = indexPath.row
             self.performSegue(withIdentifier: "editPatient", sender: nil)
+        }
+        
+    }
+    
+    // executed when we are searching
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        // check if there is text
+        if searchBar.text == "" || searchBar.text == nil {
+            // reset the table
+            searching = false
+            view.endEditing(true)
+            self.tableView.reloadData()
+        }
+        else {
+            searching = true
+            
+            // set search results
+            searchResuls = (patientData.filter({$0.name.lowercased().range(of: (searchBar.text?.lowercased())!) != nil}))
+            
+            tableView.reloadData()
         }
         
     }
