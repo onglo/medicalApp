@@ -28,6 +28,8 @@ class addPatientViewController: UIViewController {
         
         patientData.append(newPatient)
         
+        patients.addItemToQueue(itemToAdd: newPatient)
+        
         print(patientData)
     }
     

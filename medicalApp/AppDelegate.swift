@@ -16,7 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        patients.addItemToQueue(itemToAdd: Patient(name: "Edouard", DOB: "03/10/00", doctor: "Jake", dateAdmitted: "02/23/23", natureOfInjury: "broken leg", injurySeriousIndex: 3, idNumber: 123))
+        patients.addItemToQueue(itemToAdd: Patient(name: "James", DOB: "03/13/21", doctor: "John", dateAdmitted: "02/43/93", natureOfInjury: "broken elbow", injurySeriousIndex: 5, idNumber: 342))
+        patients.addItemToQueue(itemToAdd: Patient(name: "Teddy", DOB: "06/20/00", doctor: "Stevie", dateAdmitted: "02/24/43", natureOfInjury: "virus", injurySeriousIndex: 3, idNumber: 132))
+        
         return true
+    
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
