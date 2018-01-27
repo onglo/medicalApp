@@ -180,7 +180,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuZ-Jb-fo5">
                                 <rect key="frame" x="164" y="392" width="46" height="30"/>
-                                <state key="normal" title="Queue"/>
+                                <state key="normal" title="Queue">
+                                    <color key="titleColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="JiU-BB-YVj" kind="show" id="NH8-U3-FOT"/>
                                 </connections>

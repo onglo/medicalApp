@@ -48,7 +48,13 @@ class viewPatientsTableViewController: UITableViewController, UISearchBarDelegat
         
         // check if we are currenlty searching
         if searching {
-            return searchResuls.count
+            
+            if searchResuls.count == 0 {
+                return 1
+            }
+            else {
+                return searchResuls.count
+            }
         }
         
         // check if there is patient data if not we will put in a placeholder
@@ -63,7 +69,14 @@ class viewPatientsTableViewController: UITableViewController, UISearchBarDelegat
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
+        if (patientData.count == 0 || (searching == true && searchResuls.count == 0)) {
+            // if there is no patient data return cell saaying there is no data
+            let cell = tableView.dequeueReusableCell(withIdentifier: "noData")
+            return cell!
+        }
+        
+        
         // check if we are searching
         if searching {
             let patientCell:patientTableViewCell = tableView.dequeueReusableCell(withIdentifier: "patientCell") as! patientTableViewCell
@@ -75,13 +88,6 @@ class viewPatientsTableViewController: UITableViewController, UISearchBarDelegat
             patientCell.priorityLabel.text = "Priority: \(String(describing: searchResuls[indexPath.row].injurySeriousIndex!))"
             
             return patientCell
-        }
-        
-        
-        if (patientData.count == 0) {
-            // if there is no patient data return cell saaying there is no data
-            let cell = tableView.dequeueReusableCell(withIdentifier: "noData")
-            return cell!
         }
         
         else {

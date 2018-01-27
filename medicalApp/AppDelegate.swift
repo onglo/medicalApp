@@ -17,9 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        patients.addItemToQueue(itemToAdd: Patient(name: "Edouard", DOB: "03/10/00", doctor: "Jake", dateAdmitted: "02/23/23", natureOfInjury: "broken leg", injurySeriousIndex: 3, idNumber: 123))
-        patients.addItemToQueue(itemToAdd: Patient(name: "James", DOB: "03/13/21", doctor: "John", dateAdmitted: "02/43/93", natureOfInjury: "broken elbow", injurySeriousIndex: 5, idNumber: 342))
-        patients.addItemToQueue(itemToAdd: Patient(name: "Teddy", DOB: "06/20/00", doctor: "Stevie", dateAdmitted: "02/24/43", natureOfInjury: "virus", injurySeriousIndex: 3, idNumber: 132))
+        patients.addItemToQueue(itemToAdd: Patient(name: "Edouard", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 1, idNumber: 328172))
+        patients.addItemToQueue(itemToAdd: Patient(name: "James", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 2, idNumber: 99281))
+        patients.addItemToQueue(itemToAdd: Patient(name: "Ned", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 3, idNumber: 121232))
+        patients.addItemToQueue(itemToAdd: Patient(name: "Jake", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 4, idNumber: 221100))
         
         return true
     
