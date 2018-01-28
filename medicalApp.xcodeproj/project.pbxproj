@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B1A5500201E461D00BA28CE /* medicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A54FF201E461D00BA28CE /* medicationViewController.swift */; };
+		5B1A5502201E4D3700BA28CE /* viewMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1A5501201E4D3700BA28CE /* viewMedicationViewController.swift */; };
 		5B4F481F201BDA0F009A8FBF /* circularQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F481E201BDA0F009A8FBF /* circularQueue.swift */; };
 		5B4F4821201BDE64009A8FBF /* queueTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4F4820201BDE64009A8FBF /* queueTableViewController.swift */; };
 		5BAE65232011F7EF00D8B4AA /* viewPatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAE65222011F7EF00D8B4AA /* viewPatientsTableViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B1A54FF201E461D00BA28CE /* medicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicationViewController.swift; sourceTree = "<group>"; };
+		5B1A5501201E4D3700BA28CE /* viewMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewMedicationViewController.swift; sourceTree = "<group>"; };
 		5B4F481E201BDA0F009A8FBF /* circularQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circularQueue.swift; sourceTree = "<group>"; };
 		5B4F4820201BDE64009A8FBF /* queueTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = queueTableViewController.swift; sourceTree = "<group>"; };
 		5BAE65222011F7EF00D8B4AA /* viewPatientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewPatientsTableViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +77,8 @@
 				5BCF9F0C200E29AE002DC5C3 /* AppDelegate.swift */,
 				5BCF9F0E200E29AE002DC5C3 /* ViewController.swift */,
 				5BCF9F10200E29AE002DC5C3 /* Main.storyboard */,
+				5B1A5501201E4D3700BA28CE /* viewMedicationViewController.swift */,
+				5B1A54FF201E461D00BA28CE /* medicationViewController.swift */,
 				5B4F4820201BDE64009A8FBF /* queueTableViewController.swift */,
 				5BAE65262012048E00D8B4AA /* editPatientViewController.swift */,
 				5BAE65242011F97300D8B4AA /* patientTableViewCell.swift */,
@@ -161,12 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAE65232011F7EF00D8B4AA /* viewPatientsTableViewController.swift in Sources */,
+				5B1A5500201E461D00BA28CE /* medicationViewController.swift in Sources */,
 				5BAE65252011F97300D8B4AA /* patientTableViewCell.swift in Sources */,
 				5BCF9F21200E305B002DC5C3 /* modelViewController.swift in Sources */,
 				5B4F481F201BDA0F009A8FBF /* circularQueue.swift in Sources */,
 				5BCF9F0F200E29AE002DC5C3 /* ViewController.swift in Sources */,
 				5B4F4821201BDE64009A8FBF /* queueTableViewController.swift in Sources */,
 				5BAE65272012048E00D8B4AA /* editPatientViewController.swift in Sources */,
+				5B1A5502201E4D3700BA28CE /* viewMedicationViewController.swift in Sources */,
 				5BCF9F0D200E29AE002DC5C3 /* AppDelegate.swift in Sources */,
 				5BCF9F23200E308F002DC5C3 /* patientDataModel.swift in Sources */,
 				5BCF9F1F200E2BED002DC5C3 /* addPatientViewController.swift in Sources */,

@@ -56,6 +56,13 @@ class editPatientViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMeds" {
+            print(patientID)
+            let dest = segue.destination as! viewMedicationViewController
+            dest.id = patientData[patientID].idNumber
+        }
+    }
 
     /*
     // MARK: - Navigation

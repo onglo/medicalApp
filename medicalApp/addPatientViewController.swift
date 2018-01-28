@@ -18,10 +18,12 @@ class addPatientViewController: UIViewController {
     @IBOutlet weak var doctorNameTextField: UITextField!
     @IBOutlet weak var seriousSelector: UISegmentedControl!
     
+    var patientId:Int!
+    
     @IBAction func addPatientPressed(_ sender: Any) {
         
         // generate a patient id
-        let patientId:Int = Int(arc4random())
+        patientId = Int(arc4random())
         
         // create a new patient instance and push it into the patient array
         let newPatient:Patient = Patient(name: nameTextField.text, DOB: dateOfBirthTextField.text, doctor: doctorNameTextField.text, dateAdmitted: dateOfAdmissionTextField.text, natureOfInjury: natureOfInjuryTextField.text, injurySeriousIndex: seriousSelector.selectedSegmentIndex, idNumber: patientId)
@@ -42,6 +44,11 @@ class addPatientViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! medicationViewController
+        dest.id = patientId
     }
     
 

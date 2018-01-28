@@ -12,3 +12,5 @@ var patients = circularPriorityQueue(lengthOfQueue: 100)
 
 var patientData:[Patient] = [Patient(name: "Edouard", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 1, idNumber: 328172),Patient(name: "James", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 2, idNumber: 99281),Patient(name: "Ned", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 3, idNumber: 121232),Patient(name: "Jake", DOB: "02.23.23", doctor: "James", dateAdmitted: "23.12.12", natureOfInjury: "Broken Leg", injurySeriousIndex: 4, idNumber: 221100)]
 
+var PatientPills = [328172: ["Paracetamol _0"],99281: ["Paracetamol _0"],121232: ["Paracetamol _0"],221100: ["Paracetamol _0"]]
+
